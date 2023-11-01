@@ -10,7 +10,7 @@ def loginEmpresa(clientes: list) -> None:
     """
     while True:
         try:
-            print("""
+            print("""\033[1;33m
     ----------------------------
           Login Empresa
 
@@ -23,13 +23,13 @@ def loginEmpresa(clientes: list) -> None:
     3 - Verificar estado de algum veículo cadastrado;
 
     4 - Consultar tokens de clientes.
-             """)
+            \033[m""")
 
 
             escolha = int(input("Escolha uma das opções acima: "))
 
             if escolha == 0:
-                print("Saindo...")
+                print("\033[1;32mLogout feito!\033[m")
                 break
             elif escolha == 1:
                 print("Abrindo nova ficha cadastral...")
