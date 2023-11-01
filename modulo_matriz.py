@@ -9,7 +9,7 @@ def loginEmpresa(clientes: list) -> None:
     Função que mostra um menu com opções para o usuário, simulando o uso da ferramenta por um funcionário da empresa.
     """
     while True:
-        # try:
+        try:
             print("""
     ----------------------------
           Login Empresa
@@ -42,10 +42,10 @@ def loginEmpresa(clientes: list) -> None:
                 verificarToken()
             else:
                 print("\n\033[1;31mDigite 0, 1, 2, 3 ou 4 apenas!\033[m")
-        # except ValueError:
-        #     print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
-        # except Exception:
-        #     print("\n\033[1;31mOcorreu um erro inesperado!\033[m")
+        except ValueError:
+            print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
+        except Exception:
+            print("\n\033[1;31mOcorreu um erro inesperado!\033[m")
 
 
 
@@ -54,7 +54,7 @@ def cadastroCliente(clientes: list) -> None:
     Função que gera um número aleatório utilizando a biblioteca random, definindo-o como chave do dicionário principal. Pede para que o usuário digite seus dados e armazena no valor do dicionário principal no formato de outro dicionário. Printando sucesso na tela assim que todos os dados tiverem sido preenchidos corretamente na ficha de cadastro. Após, pega o dicionário criado transformado-o em um json, armazenado num arquivo json.
     """
     while True:
-        # try:
+        try:
             dicionario = {}
 
             token = randint(1000,100000)
@@ -75,10 +75,10 @@ def cadastroCliente(clientes: list) -> None:
 
                 print("\n\033[1;32mCadastro efetuado!\033[m")
                 break
-        # except ValueError:
-        #     print("Valor inválido! Tente novamente...")
-        # except Exception:
-        #     print("Ocorreu um erro inesperado! Tente novamente...")
+        except ValueError:
+            print("Valor inválido! Tente novamente...")
+        except Exception:
+            print("Ocorreu um erro inesperado! Tente novamente...")
    
 
 
@@ -180,7 +180,7 @@ def loginCliente(clientes: list) -> None:
     Função que printa uma menu com 2 opções para o usuário.
     """
     while True:
-        # try:
+        try:
             print("""\033[1;33m
 ---------------------------------
             \nLogin Cliente
@@ -209,10 +209,10 @@ def loginCliente(clientes: list) -> None:
                     print("\n\033[1;31mToken não cadastrado! Verifique se digitou corretamente...\033[m")
             else:
                 print("Escolha 0 ou 1 para a escolha ser válida!")
-        # except ValueError:
-        #     print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
-        # except Exception:
-        #     print("\n\033[1;31mOcorreu um erro inesperado! Tente novamente...\033[m")
+        except ValueError:
+            print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
+        except Exception:
+            print("\n\033[1;31mOcorreu um erro inesperado! Tente novamente...\033[m")
     
 
 
@@ -221,7 +221,7 @@ def areaCliente(cliente: dict,clientes: list,token: str) -> None:
     Função que apresenta um menu com opções para o usuário. Simulando o uso do app por um cliente cadastrado.
     """
     while True:
-        # try:
+        try:
             for nome in cliente[token].keys():
                 print(f'''\033[1;33m
 --------------------------------
@@ -262,10 +262,10 @@ Seja Bem Vindo(a) Sr(a). {nome}!
                 break
             else:
                 print("\n\033[1;31mDigite 0, 1, 2, 3, 4, 5 ou 6!\033[m")
-        # except ValueError:
-        #     print("\n\033[1;31mDigite valores válidos\033[m")
-        # except Exception:
-        #     print("\n\033[1;31mOcorreu um erro inesperado!\033[m")
+        except ValueError:
+            print("\n\033[1;31mDigite valores válidos\033[m")
+        except Exception:
+            print("\n\033[1;31mOcorreu um erro inesperado!\033[m")
 
 
 
@@ -359,7 +359,7 @@ def excluirCadastro(cliente: dict,clientes: list) -> None:
     """
     while True:
         try:
-            print("""
+            print("""\033[1;33m
 
 Você tem certeza que deseja excluir seu cadastro?
                               
@@ -367,7 +367,7 @@ Você tem certeza que deseja excluir seu cadastro?
                               
 1 - Prosseguir.
 
-""")
+\033[m""")
             escolha = int(input('\nDigite sua escolha: '))
 
             if escolha == 0:
@@ -377,18 +377,18 @@ Você tem certeza que deseja excluir seu cadastro?
                 clientes.remove(cliente)
 
                 for nome in cliente.keys():
-                    print(f"O cadastro do cliente {nome} foi removido com sucesso!")
+                    print(f"\033[1;32mO cadastro do cliente {nome} foi removido com sucesso!\033[m")
 
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
                     json.dump(clientes,arquivo,indent=4)
 
                 break
             else:
-                print("Escolha 0 ou 1 para a escolha ser válida!")
+                print("\033[1;31mEscolha 0 ou 1 para a escolha ser válida!\033[m")
         except ValueError:
-            print("Digite valores válidos!")
+            print("\033[1;31mDigite valores válidos!\033[m")
         except Exception:
-            print("Ocorreu um erro inesperado!")
+            print("\033[1;31mOcorreu um erro inesperado!\033[m")
 
 
 
@@ -398,7 +398,7 @@ def editarDados(cliente: dict, clientes: list) -> None:
     """
     while True:
         try:
-            print("""
+            print("""\033[1;33m
 
 O que você deseja editar?
                               
@@ -412,13 +412,13 @@ O que você deseja editar?
                               
 4 - Editar todos os dados.
 
-""")
+\033[m""")
             escolha = int(input("\nDigite sua escolha: "))
 
             if escolha == 0:
                 break
             elif escolha == 1:
-                print("\nEditando Idade\n")
+                print("\n\033[1;34mEditando Idade\033[m\n")
                 novo_idade = int(input("Digite sua idade: "))
 
                 for dados in cliente.values():
@@ -431,8 +431,10 @@ O que você deseja editar?
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
                     json.dump(clientes,arquivo,indent=4)
 
+                print("\033[1;32mIdade editada com sucesso!\033[m")
+
             elif escolha == 2:
-                print("\nEditando Modelo do Veículo\n")
+                print("\n\033[1;34mEditando Modelo do Veículo\033[m\n")
                 novo_carro = input("Digite o nome do modelo: ").upper().strip()
 
                 for dados in cliente.values():
@@ -444,9 +446,11 @@ O que você deseja editar?
 
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
                     json.dump(clientes,arquivo,indent=4)
+                
+                print("\033[1;32mModelo editado com sucesso!\033[m")
 
             elif escolha == 3:
-                print("\nEditando Placa do Veículo\n")
+                print("\n\033[1;34mEditando Placa do Veículo\033[m\n")
                 nova_placa = input("Digite a placa do veículo: ").upper().strip()
 
                 for dados in cliente.values():
@@ -458,9 +462,11 @@ O que você deseja editar?
 
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
                     json.dump(clientes,arquivo,indent=4)
+                
+                print("\033[1;32mPlaca editada com sucesso!\033[m")
 
             elif escolha == 4:
-                print("\nEditando dados de cadastro:\n")
+                print("\n\033[1;34mEditando dados de cadastro:\033[m\n")
                 novo_idade = int(input("Digite sua idade: "))
                 novo_carro = input("Digite o modelo do veículo: ").upper().strip()
                 nova_placa = input("Digite a placa do veículo: ").upper().strip()
@@ -474,13 +480,15 @@ O que você deseja editar?
 
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
                     json.dump(clientes,arquivo,indent=4)
+                
+                print("\033[1;32mDados editados com sucesso!\033[m")
 
             else:
-                print("Escolha 0, 1, 2 ,3 , 4 para ser uma escolha válida!")
+                print("\033[1;31mEscolha 0, 1, 2 ,3 , 4 para ser uma escolha válida!\033[m")
         except ValueError:
-            print("Digite um valor válido!")
+            print("\033[1;31mDigite um valor válido!\033[m")
         except Exception:
-            print("Ocorreu um erro inesperado!")
+            print("\033[1;31mOcorreu um erro inesperado!\033[m")
 
 
 #  ///////////////// ATUALIZAÇÃO DA LISTA /////////////////////////////////////////////////////////////

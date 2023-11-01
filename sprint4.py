@@ -23,7 +23,7 @@ for item in lista:
 while True:
 
 
-    # try:
+    try:
         print("""\033[1;33m
     --------------------------------
     Seja bem vindo(a)!
@@ -48,7 +48,7 @@ while True:
             loginEmpresa(lista_de_clientes)
         else: 
             print("\n\033[1;31mDigite 0, 1 ou 2!\033[m")
-    # except ValueError:
-    #     print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
-    # except Exception:
-    #     print("\n\033[1;31mOcorreu um erro inesperado! Tente novamente...\033[m")
+    except ValueError:
+        print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
+    except Exception:
+        print("\n\033[1;31mOcorreu um erro inesperado! Tente novamente...\033[m")
