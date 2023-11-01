@@ -333,7 +333,7 @@ def lojaCliente() -> None:
     """
     Função que apresenta ao usuário uma loja de produtos e serviços para veículos.
     """
-    print("""
+    print("""\033[1;34m
 Revisão Gratuita para o seu veículo  -  500 créditos
 
 Som Pioneer  -  1200 créditos
@@ -349,7 +349,7 @@ Park Assist  -  1000 créditos
 Lavagem Completa  -  100 créditos
           
 (Obs: Para trocar seus créditos por algum dos serviços disponibilizados vá até alguma de nossas empresas parceiras.)
-""")
+\033[m""")
     
 
 
