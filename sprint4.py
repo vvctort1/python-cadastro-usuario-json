@@ -39,8 +39,8 @@ while True:
         escolha = int(input("Escolha uma das opções de login: "))
 
         if escolha == 0:
-            print("Encerrando o programa...")
-            print("Obrigado por utilizar nosso programa! Programa encerrado com sucesso.")
+            print("\nEncerrando o programa...")
+            print("\n\033[1;32mObrigado por utilizar nosso programa! Programa encerrado com sucesso.\033[m")
             break
         elif escolha == 1:
             loginCliente(atualizarListaClientes())

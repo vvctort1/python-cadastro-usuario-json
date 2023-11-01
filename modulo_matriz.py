@@ -193,7 +193,7 @@ def loginCliente(clientes: list) -> None:
 \033[m""")
             escolha = int(input("\nDigite sua escolha: "))
             if escolha == 0:
-                print("\033[1;32mVoltando para o Menu Principal...\033[m")
+                print("\n\033[1;32mVoltando para o Menu Principal...\033[m")
                 break
             elif escolha == 1:
                 token = input("\nDigite seu token (é necessário ter cadastro pela empresa): ")
@@ -208,7 +208,7 @@ def loginCliente(clientes: list) -> None:
                 if token != token_cliente:
                     print("\n\033[1;31mToken não cadastrado! Verifique se digitou corretamente...\033[m")
             else:
-                print("Escolha 0 ou 1 para a escolha ser válida!")
+                print("\033[1;31mEscolha 0 ou 1 para a escolha ser válida!\033[m")
         except ValueError:
             print("\n\033[1;31mValor inválido! Tente novamente...\033[m")
         except Exception:
