@@ -1,0 +1,42 @@
+[
+    {
+        "45034": {
+            "ADRIANA": {
+                "idade": 55,
+                "carro": "HONDA FIT",
+                "placa": "EKN-0225",
+                "credito": 836
+            }
+        }
+    },
+    {
+        "47029": {
+            "MARCIO": {
+                "idade": 59,
+                "carro": "A45S",
+                "placa": "ASDFFFF",
+                "credito": 2648
+            }
+        }
+    },
+    {
+        "77506": {
+            "MARIANA": {
+                "idade": 18,
+                "carro": "TIGUAN",
+                "placa": "IIISSA3",
+                "credito": 2119
+            }
+        }
+    },
+    {
+        "8122": {
+            "CAMILA": {
+                "idade": 25,
+                "carro": "CLIO",
+                "placa": "EIO-2345",
+                "credito": 1692
+            }
+        }
+    }
+]
