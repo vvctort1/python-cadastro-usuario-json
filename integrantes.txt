@@ -1,3 +1,27 @@
+Descrição das funcionalidades Implementadas:
+
+O projeto da equipe é o SensorAlertCar, um sensor de carbono que estará instalado nas proximidades do escapamento de um veículo. Este sensor estará enviando os dados coletados à respeito da quantidade de gases poluentes emitidos pelo carro para uma aplicação. Como incentivo para as pessoas manterem seus carros em ordem em relação a poluição indicada pelo sensor, pensamos num esquema de acumulação de pontuações de crédito que, conforme acumulado, poderão ser trocados por produtos e serviços para seus carros. 
+
+Simulamos neste programa em Python uma interface da aplicação com suas funcionalidades. O dono do veículo será cadastrado por um funcionário da empresa parceira onde o carro foi adquirido já com o SensorAlertCar instalado. 
+
+No início será necessário escolher entre as opções de fazer login como um funcionário da empresa ou um cliente. O direcionamento para a área do cliente só será possível caso ele já tenha sido cadastrado pela empresa e gerado seu "token único" (número aleatório gerado pela biblioteca random) no momento em que o cadastro é feito. Sendo então necessário, fazer login como empresa e efetuar o cadastro do cliente. Após o cadastro temos algumas opções de consulta para o funcionário da empresa, dentre eles a opção de consultar o token de algum cliente já cadastrado. Grave este token que ele será usado para entrar na área do cliente após fazer o logout da empresa (simulando uma senha para o cliente). Após a empresa realizar um cadastro, o cliente e seus dados são armazenados num arquivo json, simulando um banco de dados. Contendo todos os clientes que já conseguem efetuar o login com seu token no login do cliente.
+
+Após realizar o login do cliente com o token, o cliente poderá escolher entre outras opções, como consultar seus dados de cadastro, ver o status de seu veículo através dos dados coletados pelo SensorAlertCar, verificar a quantidade de créditos acumulados (que também é gerado através de um número aleatório com a biblioteca random quando o cadastro do cliente é feito) e ainda consegue consultar os produtos e serviços disponíveis numa loja. Por último, adicionamos mais 2 funcionalidades para o cliente, a primeira é a funcionalidade de editar seus dados cadastrais, caso esteja incorreto, atualizando os dados no arquivo json e em todo o programa. A segunda é a opção para o cliente excluir sua conta, excluindo assim, seus dados do banco de dados e do programa. Direcionando o usuário de volta para o menu principal, não sendo mais possível acessar sua conta com o token utilizado anteriormente.
+
+
+
+OBSERVAÇÕES: 
+
+- Todas as funções utilizadas foram colocadas separadas do programa principal dentro do arquivo "modulo_matriz.py".
+
+- Cores foram implementadas no terminal para facilitar a vizualização do programa.
+
+- A lista de clientes utilizada no programa contém a seguinte estrutura: 
+
+[{token1 : {nomeDoCliente1 : {chaveDadosCliente : valorDadosCliente}}}, {token2 : {nomeDoCliente2 : {chaveDadosCliente : valorDadosCliente}}}, ...] 
+
+
+
 Integrantes:
 
 - João Lucas Cancado Pamponet (rm:551612)
@@ -5,9 +29,5 @@ Integrantes:
 - Miguel Ruan (rm:551239)
 - Ricardo Ramos Vergani (rm:550166)
 - Victor Kenzo Toma (rm:551649)
-
-
-
-Descrição das funcionalidades Implementadas:
 
 

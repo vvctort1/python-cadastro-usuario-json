@@ -1,28 +1,16 @@
 from modulo_matriz import loginEmpresa,loginCliente,atualizarListaClientes
 import json
 
-
-# TRY EXCEPT COMENTADOS PARA VERIFICAR ERROS
-
-# COLOCAR CORES E EDITAR VIZUALIZAÇÃO NO TERMINAL
-
-# IMPLEMENTAR ALGUMA API, TALVEZ NO CADASTRO DE USUÁRIO
-
-# COMENTAR CÓDIGO
-
-# DESCRIÇÃO DO PROJETO NO ARQUIVO integrantes.txt
-
 lista_de_clientes = []
 
-with open("clientes.json","r") as arquivo:
-    lista = json.load(arquivo)
+with open("clientes.json","r") as arquivo:   # lê o arquivo json
+
+    lista = json.load(arquivo)   # transforma o json em uma lista
 
 for item in lista:
-    lista_de_clientes.append(item)
+    lista_de_clientes.append(item)   # coloca na lista_de_clientes todos os clientes cadastrados no json
 
 while True:
-
-
     try:
         print("""\033[1;33m
     --------------------------------

@@ -423,7 +423,7 @@ O que você deseja editar?
 
                 for dados in cliente.values():
                     for dado in dados.values():
-                        dado["idade"] = novo_idade
+                        dado["idade"] = novo_idade            # editando idade
                         dado["carro"] = dado["carro"]
                         dado["placa"] = dado["placa"]
                         dado["credito"] = dado["credito"]
@@ -440,7 +440,7 @@ O que você deseja editar?
                 for dados in cliente.values():
                     for dado in dados.values():
                         dado["idade"] = dado["idade"]
-                        dado["carro"] = novo_carro
+                        dado["carro"] = novo_carro            # editando carro
                         dado["placa"] = dado["placa"]
                         dado["credito"] = dado["credito"]
 
@@ -457,7 +457,7 @@ O que você deseja editar?
                     for dado in dados.values():
                         dado["idade"] = dado["idade"]
                         dado["carro"] = dado["carro"]
-                        dado["placa"] = nova_placa
+                        dado["placa"] = nova_placa             # editando placa
                         dado["credito"] = dado["credito"]
 
                 with open("clientes.json","w",encoding="utf-8") as arquivo:
@@ -474,7 +474,7 @@ O que você deseja editar?
                 for dados in cliente.values():
                     for dado in dados.values():
                         dado["idade"] = novo_idade
-                        dado["carro"] = novo_carro
+                        dado["carro"] = novo_carro             # editando dados
                         dado["placa"] = nova_placa
                         dado["credito"] = dado["credito"]
 
@@ -493,9 +493,9 @@ O que você deseja editar?
 
 #  ///////////////// ATUALIZAÇÃO DA LISTA /////////////////////////////////////////////////////////////
 
-def atualizarListaClientes() -> None:
+def atualizarListaClientes() -> list:
     """
-    Retorna a lista de clientes atualizada com os novos clientes cadastrados no arquivo json. A atualização é necessária para que o novo usuário cadastrado consiga fazer login utilizando seu token.
+    Retorna a lista de clientes atualizada com os novos clientes cadastrados pela empresa no arquivo json. A atualização é necessária para que o cliente cadastrado recentemente consiga fazer login utilizando seu token.
     """
 
     lista_de_clientes = []
